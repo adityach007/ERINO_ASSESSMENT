@@ -76,3 +76,48 @@ const contactSchema = {
      ```npm run dev```
 
   The application will be available at ```http://localhost:3000```
+
+
+## Project Structure
+
+### Frontend
+
+  - **/src/components/** - React Components
+    - **ContactForm.jsx** - Form for adding/editing contacts
+    - **ContactTable.jsx** - Displays contacts with sorting and pagination
+    - **DeleteConfirmDialog.jsx** - Confirmation dialog for delete action
+  - **/src/services/** - API communication layer
+    - **api.js** - Axios instance and API methods
+
+### Backend
+
+  - **/src/models/** - Database models
+  - **/src/controllers/** - Business logic
+  - **/src/routes/** - API routes
+  - **/src/middleware/** - Custom middleware
+  - **/src/config/** - Configuration files
+
+## Technical Decisions
+
+  - **Vite:** Chosen over Create React App for faster development experience
+  - **Material-UI:** Provides consistent UI components and responsive design
+  - **MongoDB:** Flexible schema and easy integration with Node.js
+  - **Express.js:** Lightweight and flexible backend framework
+
+## Challenges and Solutions
+
+  1. **Email Uniqueness:**
+     - **Challenge:** Ensuring email uniqueness while allowing updates
+     - **Solution:** Implemented custom MongoDB query to exclude current contact when checking uniqueness
+
+  2. **Form Validation:**
+     - **Challenge:** Real-time validation with good UX
+     - **Solution:** Combined client-side validation with server-side checks and clear error messages
+    
+  3. **Sort and Pagination:**
+     - **Challenge:** Implementing efficient sorting with pagination
+     - **Solution:** Used Material-UI's built-in components and maintained sort state in the parent component
+    
+  4. **Error Handling:**
+     - **Challenge:** Consistent error handling across the application
+     - **Solution:** Created a centralized error handler middleware and standardized error responses 
