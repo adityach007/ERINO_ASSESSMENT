@@ -2,6 +2,11 @@
 
 A full-stack MERN application for managing contacts with features like adding, editing, deleting, and sorting contacts. The system uses Material-UI for the frontend interface and MongoDB for data persistence.
 
+## Workflow
+
+![Uploading Screenshot 2024-11-17 142246.png…]()
+
+
 ## Features
 
 - Create, Read, Update, and Delete (CRUD) contacts
